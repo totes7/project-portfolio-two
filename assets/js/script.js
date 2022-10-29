@@ -25,5 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function displayQuestionOne() {
     let question = document.getElementById('question');
-    question.innerText = 'What team has won the most World Cups in football history?'
+    question.innerText = 'Which of these teams has won the most World Cups in football history?';
+
+    let answerA = document.getElementById('answer-a');
+    answerA.innerText = 'Germany';
+    let answerB = document.getElementById('answer-b');
+    answerB.innerText = 'Italy';
+    let answerC = document.getElementById('answer-c');
+    answerC.innerText = 'Brazil';
+    let answerD = document.getElementById('answer-d');
+    answerD.innerText = 'France';
 }
