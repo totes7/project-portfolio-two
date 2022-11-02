@@ -50,6 +50,10 @@ header {
     padding-left: 10px;
 }
 
+.logo:hover {
+    color: gold;
+}
+
 .logo i {
     color: gold;
 }

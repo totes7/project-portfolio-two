@@ -1,45 +1,47 @@
 let questions = [
     {
         prompt: 'Which of these teams has won the most World Cups in football history?',
-        answers: ['Brazil', 'Italy', 'France', 'Germany']
+        answers: ['Italy', 'France', 'Brazil', 'England']
     },
     {
         prompt: 'Which of these players has scored more goals in World Cup history?',
-        answers: ['Miroslav Klose', 'Ronaldo', 'Roberto Baggio', 'Lionel Messi']
+        answers: ['Ronaldo', 'Miroslav Klose', 'Roberto Baggio', 'Lionel Messi']
     },
     {
         prompt: 'Which continent has hosted more World Cups?',
-        answers: ['Europe', 'Asia', 'Africa', 'Americas']
+        answers: ['Asia', 'Africa', 'Americas', 'Europe']
     },
     {
         prompt: 'Who is the only player to win 3 World Cups?',
-        answers: ['Pelé', 'Diego Maradona', 'Francesco Totti', 'Franz Beckenbauer']
+        answers: ['Diego Maradona', 'Pelé', 'Francesco Totti', 'Franz Beckenbauer']
     },
     {
         prompt: 'Which of these teams has lost the World Cup final the most times?',
-        answers: ['Germany', 'Argentina', 'England', 'Uruguay']
+        answers: ['Argentina', 'England', 'Germany', 'France']
     },
     {
         prompt: 'Who won the first ever World Cup?',
-        answers: ['Uruguay', 'Italy', 'Brazil', 'Messico']
+        answers: ['Italy', 'Uruguay', 'Tunisia', 'Messico']
     },
     {
         prompt: 'Who is the oldest player to play and score in a World Cup at age 42?',
-        answers: ['Roger Milla', 'Miroslav Klose', 'Diego Maradona', 'Michel Platini']
+        answers: ['Luca Toni', 'Diego Maradona', 'Roger Milla', 'Michel Platini']
     },
     {
         prompt: 'Who scored the fastest goal in World Cup history, after just 11 seconds?',
-        answers: ['Hakan Sukur', 'Pelé', 'Harry Kane', 'Cristiano Ronaldo']
+        answers: ['Gerd Müller', 'Harry Kane', 'Cristiano Ronaldo', 'Hakan Sukur']
     },
     {
         prompt: 'Who is the only coach to win 2 World Cups?',
-        answers: ['Vittorio Pozzo', 'Felipe Scolari', 'Fabio Capello', 'Vicente del Bosque']
+        answers: ['Felipe Scolari', 'Vittorio Pozzo', 'Fabio Capello', 'Vicente del Bosque']
     },
     {
         prompt: 'Australia won a World Cup qualifying match for 31-0. Who did they win against?',
-        answers: ['American Samoa', 'Fiji', 'Japan', 'New Zeland']
+        answers: ['Fiji', 'Japan','American Samoa',  'New Zeland']
     },
-]
+];
+
+
 
 
 
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     start.addEventListener('click', function(){
         let gameArea = document.getElementsByClassName('game-area');
         gameArea[0].style.display = 'inline-block';
-        displayQuestionOne();
+        displayQuestion();
     })
 
     let toggler = document.getElementById('menu-toggler');
@@ -65,10 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
         menu[0].style.transform = 'translateX(80%)';
         }
     })
+
+    checkAnswer();
 })
 
 
-function displayQuestionOne() {
+function displayQuestion() {
     let question = document.getElementById('question');
     question.innerText = questions[0].prompt;
 
@@ -80,4 +84,21 @@ function displayQuestionOne() {
     answerC.innerText = questions[0].answers[2];
     let answerD = document.getElementById('answer-d');
     answerD.innerText = questions[0].answers[3];
+}
+
+function checkAnswer() {
+    let correctAnswers = ['Brazil', 'Miroslav Klose', 'Europe', 'Pelé', 'Germany', 'Uruguay', 'Roger Milla', 'Hakan Sukur', 'Vittorio Pozzo', 'American Samoa'];
+    let answer = document.getElementsByClassName('answer');
+    for (let i = 0; i < answer.length; i++) {
+        answer[i].addEventListener('click', function() {
+            if (correctAnswers.includes(answer[i].innerText)) {
+                answer[i].style.backgroundColor = 'green';
+            } else {
+                answer[i].style.backgroundColor = 'red';
+                let lives = document.getElementById('l-num');
+                let n = document.getElementById('l-num').innerText;
+                lives.innerText = n - 1;
+            }
+        })
+    }
 }
