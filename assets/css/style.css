@@ -122,6 +122,7 @@ hr {
     color: rgb(0 83 145);
     border: 2px solid rgb(0 83 145);
     border-radius: 25px;
+    font-family: Audiowide, sans-serif;
 }
 
 #start:hover {
@@ -145,12 +146,28 @@ hr {
     display: none;
 }
 
+.scoreboard {
+    width: 90%;
+    height: 5%;
+    margin: 1% 0 1% 5%;
+    font-size: 130%;
+    display: inline-block;
+}
+
+#lives {
+    float: left;
+}
+
+#track {
+    float: right;
+}
+
 #question {
     width: 90%;
-    height: 30%;
+    height: 20%;
     background-color: rgb(245, 245, 245);
-    margin: 5% 0 2% 5%;
-    padding-top: 60px;
+    margin: 2% 0 2% 5%;
+    padding-top: 30px;
     border: 1px solid gold;
     box-shadow: -10px -10px rgb(255 215 0);
     text-align: center;
@@ -166,8 +183,34 @@ hr {
     border: 1px solid gold;
     box-shadow: -10px -10px rgb(255 215 0);
     font-family: Audiowide, sans-serif;
+    font-size: 150%;
 }
 
 .answer:hover {
     background-color: rgb(0 83 145);
+}
+
+#next {
+    width: 10%;
+    height: 7%;
+    border: 1px solid rgb(0 83 145);
+    margin-left: 45%;
+    font-family: Audiowide, sans-serif;
+}
+
+#next:hover {
+    background-color: gold;
+}
+
+#finish {
+    width: 10%;
+    height: 7%;
+    border: 1px solid rgb(0 83 145);
+    margin-left: 45%;
+    font-family: Audiowide, sans-serif;
+    display: none;
+}
+
+#finish:hover {
+    background-color: gold;
 }
