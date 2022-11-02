@@ -246,6 +246,13 @@ hr {
     margin: 1%;
 }
 
+#trophy-banner {
+    font-family: Audiowide, sans-serif;
+    font-size: 125%;
+    float: left;
+    padding-left: 20%;
+}
+
 #trophy {
     width: 5%;
     height: 20%;
@@ -258,7 +265,7 @@ hr {
 }
 
 #trophy:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 .trophy-history {
@@ -282,4 +289,51 @@ hr {
     height: 10%;
     background-color: rgb(245, 245, 245);
     float: right;
+}
+
+/* Winners section */
+
+.winners {
+    width: 80%;
+    height: 80%;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    font-size: 110%;
+    border: 10px solid rgb(0 83 145);
+    display: inline-block;
+
+    position: absolute;
+    left: 10%;
+    bottom: 5%;
+}
+
+#trophy-winners {
+    width: 25%;
+    height: 80%;
+}
+
+.winners-left {
+    width: 35%;
+    font-family: Audiowide, sans-serif;
+    font-size: 170%;
+    text-align: left;
+    color: gold;
+    float: left;
+    padding: 1% 0 0 5%;
+    box-sizing: border-box;
+}
+
+.winners-right {
+    width: 35%;
+    font-family: Audiowide, sans-serif;
+    font-size: 170%;
+    text-align: right;
+    color: gold;
+    float: right;
+    padding: 1% 5% 0 0 ;
+    box-sizing: border-box;
+}
+
+.winners-left span, .winners-right span {
+    color: rgb(0, 83, 145);
 }
