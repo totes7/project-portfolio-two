@@ -42,7 +42,34 @@ let questions = [
 ];
 
 
+// Menu toggler 
 
+let toggler = document.getElementById('menu-toggler');
+toggler.addEventListener('click', function() {
+    let menu = document.getElementsByClassName('menu');
+
+    if (menu[0].style.transform == 'translateX(80%)') {
+    toggler.innerText = '- Menu';
+    menu[0].style.transform = 'translateX(0)';
+    } else {
+        toggler.innerText = '+ Menu';
+    menu[0].style.transform = 'translateX(80%)';
+    }
+})
+
+// Trophy history open and close button
+
+let openButton = document.getElementById('trophy-btn');
+openButton.addEventListener('click', function() {
+    let trophyHistory = document.getElementsByClassName('trophy-history');
+    trophyHistory[0].style.display = 'inline-block';
+})
+
+let closeButton = document.getElementById('close-trophy');
+closeButton.addEventListener('click', function() {
+    let trophyHistory = document.getElementsByClassName('trophy-history');
+    trophyHistory[0].style.display = 'none';
+})
 
 
 // Wait for the DOM to finish loading before starting the quiz
@@ -53,19 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let gameArea = document.getElementsByClassName('game-area');
         gameArea[0].style.display = 'inline-block';
         displayQuestion();
-    })
-
-    let toggler = document.getElementById('menu-toggler');
-    toggler.addEventListener('click', function() {
-        let menu = document.getElementsByClassName('menu');
-
-        if (menu[0].style.transform == 'translateX(80%)') {
-        toggler.innerText = '- Menu';
-        menu[0].style.transform = 'translateX(0)';
-        } else {
-            toggler.innerText = '+ Menu';
-        menu[0].style.transform = 'translateX(80%)';
-        }
     })
 
     checkAnswer();
