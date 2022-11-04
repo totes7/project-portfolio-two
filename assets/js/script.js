@@ -1,3 +1,15 @@
+// Wait for the DOM to finish loading before starting the quiz
+
+document.addEventListener('DOMContentLoaded', function() {
+    let start = document.getElementById('start');
+    start.addEventListener('click', function() {
+        console.log('hi');
+        let gameArea = document.getElementsByClassName('game-area');
+        gameArea[0].style.display = 'inline-block';
+        runGame();
+    })
+})
+
 let questions = [
     {
         prompt: 'Which of these teams has won the most World Cups in football history?',
@@ -42,6 +54,48 @@ let questions = [
 ];
 
 
+function runGame() {
+    for (let x = 0; x < questions.length; x++) {
+        displayQuestion(x);
+        checkAnswer();
+    }
+}
+
+
+function displayQuestion(x) {
+    
+    let question = document.getElementById('question');
+    question.innerText = questions[x].prompt;
+
+    let answerA = document.getElementById('answer-a');
+    answerA.innerText = questions[x].answers[0];
+    let answerB = document.getElementById('answer-b');
+    answerB.innerText = questions[x].answers[1];
+    let answerC = document.getElementById('answer-c');
+    answerC.innerText = questions[x].answers[2];
+    let answerD = document.getElementById('answer-d');
+    answerD.innerText = questions[x].answers[3];
+}
+
+function checkAnswer() {
+    let correctAnswers = ['Brazil', 'Miroslav Klose', 'Europe', 'Pelé', 'Germany', 'Uruguay', 'Roger Milla', 'Hakan Sukur', 'Vittorio Pozzo', 'American Samoa'];
+    let answer = document.getElementsByClassName('answer');
+    let lives = document.getElementById('l-num');
+    let n = document.getElementById('l-num').innerText;
+    for (let i = 0; i < answer.length; i++) {
+        answer[i].addEventListener('click', function() {
+            if (correctAnswers.includes(answer[i].innerText)) {
+                answer[i].style.backgroundColor = 'green';
+                return
+            } else {
+                answer[i].style.backgroundColor = 'red';
+                lives.innerText = n - 1;
+                return
+            }
+        })
+    }
+}
+
 // Menu toggler 
 
 let toggler = document.getElementById('menu-toggler');
@@ -70,49 +124,3 @@ closeButton.addEventListener('click', function() {
     let trophyHistory = document.getElementsByClassName('trophy-history');
     trophyHistory[0].style.display = 'none';
 })
-
-
-// Wait for the DOM to finish loading before starting the quiz
-
-document.addEventListener('DOMContentLoaded', function() {
-    let start = document.getElementById('start');
-    start.addEventListener('click', function(){
-        let gameArea = document.getElementsByClassName('game-area');
-        gameArea[0].style.display = 'inline-block';
-        displayQuestion();
-    })
-
-    checkAnswer();
-})
-
-
-function displayQuestion() {
-    let question = document.getElementById('question');
-    question.innerText = questions[0].prompt;
-
-    let answerA = document.getElementById('answer-a');
-    answerA.innerText = questions[0].answers[0];
-    let answerB = document.getElementById('answer-b');
-    answerB.innerText = questions[0].answers[1];
-    let answerC = document.getElementById('answer-c');
-    answerC.innerText = questions[0].answers[2];
-    let answerD = document.getElementById('answer-d');
-    answerD.innerText = questions[0].answers[3];
-}
-
-function checkAnswer() {
-    let correctAnswers = ['Brazil', 'Miroslav Klose', 'Europe', 'Pelé', 'Germany', 'Uruguay', 'Roger Milla', 'Hakan Sukur', 'Vittorio Pozzo', 'American Samoa'];
-    let answer = document.getElementsByClassName('answer');
-    for (let i = 0; i < answer.length; i++) {
-        answer[i].addEventListener('click', function() {
-            if (correctAnswers.includes(answer[i].innerText)) {
-                answer[i].style.backgroundColor = 'green';
-            } else {
-                answer[i].style.backgroundColor = 'red';
-                let lives = document.getElementById('l-num');
-                let n = document.getElementById('l-num').innerText;
-                lives.innerText = n - 1;
-            }
-        })
-    }
-}
