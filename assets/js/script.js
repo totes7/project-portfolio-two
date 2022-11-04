@@ -86,11 +86,9 @@ function checkAnswer() {
         answer[i].addEventListener('click', function() {
             if (correctAnswers.includes(answer[i].innerText)) {
                 answer[i].style.backgroundColor = 'green';
-                return
             } else {
                 answer[i].style.backgroundColor = 'red';
                 lives.innerText = n - 1;
-                return
             }
         })
     }
