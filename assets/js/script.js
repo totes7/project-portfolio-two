@@ -55,26 +55,29 @@ let questions = [
 
 
 function runGame() {
-    for (let x = 0; x < questions.length; x++) {
-        displayQuestion(x);
+    //get the random question
+    var question = questions[Math.floor(Math.random()*questions.length)];
+   console.log(question,"question" )
+  //  for (let x = 0; x < questions.length; x++) {
+        displayQuestion(question);
         checkAnswer();
-    }
+   // }
 }
 
 
 function displayQuestion(x) {
     
     let question = document.getElementById('question');
-    question.innerText = questions[x].prompt;
+    question.innerText = x.prompt;
 
     let answerA = document.getElementById('answer-a');
-    answerA.innerText = questions[x].answers[0];
+    answerA.innerText =x.answers[0];
     let answerB = document.getElementById('answer-b');
-    answerB.innerText = questions[x].answers[1];
+    answerB.innerText =x.answers[1];
     let answerC = document.getElementById('answer-c');
-    answerC.innerText = questions[x].answers[2];
+    answerC.innerText =x.answers[2];
     let answerD = document.getElementById('answer-d');
-    answerD.innerText = questions[x].answers[3];
+    answerD.innerText =x.answers[3];
 }
 
 function checkAnswer() {
@@ -88,6 +91,8 @@ function checkAnswer() {
                 answer[i].style.backgroundColor = 'green';
             } else {
                 answer[i].style.backgroundColor = 'red';
+                var question = questions[Math.floor(Math.random()*questions.length)];
+                displayQuestion(question)
                 lives.innerText = n - 1;
             }
         })
@@ -96,10 +101,10 @@ function checkAnswer() {
 
 // Menu toggler 
 
+let menu = document.getElementsByClassName('menu');
+menu[0].style.transform = 'translateX(80%)';
 let toggler = document.getElementById('menu-toggler');
-toggler.addEventListener('click', function() {
-    let menu = document.getElementsByClassName('menu');
-
+toggler.addEventListener('click', function() {  
     if (menu[0].style.transform == 'translateX(80%)') {
     toggler.innerText = '- Menu';
     menu[0].style.transform = 'translateX(0)';
