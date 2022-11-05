@@ -86,16 +86,16 @@ function checkAnswer() {
             if (correctAnswers.includes(answer[i].innerText)) {
                 answer[i].style.backgroundColor = 'green';
                 let question = questions[Math.floor(Math.random()*questions.length)];
-                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 900);
-                setTimeout(() => {displayQuestion(question);}, 1000);
+                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
+                setTimeout(() => {displayQuestion(question);}, 800);
             } else {
                 answer[i].style.backgroundColor = 'red';
                 let lives = document.getElementById('l-num');
                 let n = document.getElementById('l-num').innerText;
                 lives.innerText = n - 1;
                 let question = questions[Math.floor(Math.random()*questions.length)];
-                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 900);
-                setTimeout(() => {displayQuestion(question);}, 1000);
+                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
+                setTimeout(() => {displayQuestion(question);}, 800);
             }
         
         })
