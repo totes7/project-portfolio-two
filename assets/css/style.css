@@ -61,15 +61,15 @@ header {
 
 .menu {
     height: 50px;
-    width: 35%;
+    width: 30%;
     background-color: gold;
     position: absolute;
     font-size: 110%;
     top: 0;
     right: 0;
-    transform: translateX(80%);
+    transform: translateX(85%);
     transition: 1s;
-    padding: 10px 0 0 20px;
+    padding: 10px 0 0 15px;
     box-sizing: border-box;
 }
 
@@ -97,9 +97,9 @@ header {
     height: 80%;
     background-color: rgb(245, 245, 245);
     text-align: center;
-    font-size: 200%;
+    font-size: 300%;
     border: 10px solid rgb(0 83 145);
-    line-height: 50px;
+    line-height: 100px;
 
     position: absolute;
     left: 10%;
@@ -205,7 +205,7 @@ hr {
     height: 80%;
     background-color: rgb(245, 245, 245);
     text-align: center;
-    font-size: 100%;
+    font-size: 175%;
     border: 10px solid rgb(0 83 145);
 
     position: absolute;
@@ -226,7 +226,7 @@ hr {
 #trophy-banner {
     font-family: Audiowide, sans-serif;
     font-size: 125%;
-    padding: 5% 0 0 20%;
+    padding: 5% 0 0 15%;
 }
 
 #trophy {
@@ -234,8 +234,8 @@ hr {
     height: 30%;
 
     position: absolute;
-    bottom: 5%;
-    left: 25%;
+    bottom: 0;
+    left: 20%;
 
     transition: all .2s ease-in-out;
 }
@@ -249,7 +249,8 @@ hr {
     height: 70%;
     background-color: rgb(245, 245, 245);
     text-align: center;
-    font-size: 110%;
+    font-size: 170%;
+    padding: 1%;
     border: 5px solid gold;
     display: none;
     box-shadow: 5px 5px 8px black;
@@ -275,7 +276,7 @@ hr {
     height: 80%;
     background-color: rgb(245, 245, 245);
     text-align: center;
-    font-size: 110%;
+    font-size: 160%;
     border: 10px solid rgb(0 83 145);
     display: inline-block;
 
@@ -294,10 +295,11 @@ hr {
     font-family: Audiowide, sans-serif;
     font-size: 170%;
     text-align: left;
-    color: gold;
+    background-color: gold;
     float: left;
-    padding: 5% 0 0 5%;
+    padding: 2% 0 0 5%;
     box-sizing: border-box;
+    box-shadow: 5px 5px 8px black;
 }
 
 .winners-right {
@@ -305,10 +307,11 @@ hr {
     font-family: Audiowide, sans-serif;
     font-size: 170%;
     text-align: right;
-    color: gold;
+    background-color: gold;
     float: right;
-    padding: 5% 5% 0 0 ;
+    padding: 2% 5% 0 0 ;
     box-sizing: border-box;
+    box-shadow: -5px 5px 8px black;
 }
 
 .winners-left span, .winners-right span {
@@ -318,19 +321,76 @@ hr {
 
 /* Media queries  */
 
+/* For larger screens size from 1600px wide and down */
+
+@media screen and (max-width: 1600px) {
+    .menu {
+        width: 35%;
+        padding: 10px 0 0 5px;
+    }
+
+    .intro {
+        font-size: 180%;
+        line-height: 75px;
+    }
+
+    .history {
+        font-size: 110%;
+    }
+
+    #trophy {
+        width: 8%;
+        height: 25%;
+        bottom: 3%;
+        left: 25%;
+    }
+
+    #trophy-banner {
+        font-size: 115%;
+        padding: 0 0 0 17%;
+    }
+
+    .trophy-history {
+        width: 45%;
+        font-size: 120%;
+    }
+
+    .winners {
+        font-size: 100%;
+    }
+}
+
 /* For large and medium screens size from 1200px wide and down */
 @media screen and (max-width: 1200px) {
     .menu {
         width: 50%;
-        padding: 10px 0 0 25px;
+    }
+
+    .intro {
+        font-size: 200%;
+        line-height: 60px;
     }
 
     .answer {
         margin: 10% 0 2% 6.5%;
     }
 
+    .history {
+        font-size: 100%;
+    }
+
+    #trophy {
+        width: 7%;
+        height: 22%;
+    }
+
+    #trophy-banner {
+        font-size: 100%;
+        padding: 5% 0 0 17%;
+    }
+
     .trophy-history {
-        width: 50%;
+        font-size: 110%;
     }
 
     #trophy-winners {
