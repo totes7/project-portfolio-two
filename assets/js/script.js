@@ -56,12 +56,9 @@ let questions = [
 
 function runGame() {
     //get the random question
-    var question = questions[Math.floor(Math.random()*questions.length)];
-   console.log(question,"question" )
-  //  for (let x = 0; x < questions.length; x++) {
+    let question = questions[Math.floor(Math.random()*questions.length)];
         displayQuestion(question);
         checkAnswer();
-   // }
 }
 
 
@@ -83,20 +80,27 @@ function displayQuestion(x) {
 function checkAnswer() {
     let correctAnswers = ['Brazil', 'Miroslav Klose', 'Europe', 'Pelé', 'Germany', 'Uruguay', 'Roger Milla', 'Hakan Sukur', 'Vittorio Pozzo', 'American Samoa'];
     let answer = document.getElementsByClassName('answer');
-    let lives = document.getElementById('l-num');
-    let n = document.getElementById('l-num').innerText;
+    
     for (let i = 0; i < answer.length; i++) {
         answer[i].addEventListener('click', function() {
             if (correctAnswers.includes(answer[i].innerText)) {
                 answer[i].style.backgroundColor = 'green';
+                let question = questions[Math.floor(Math.random()*questions.length)];
+                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 900);
+                setTimeout(() => {displayQuestion(question);}, 1000);
             } else {
                 answer[i].style.backgroundColor = 'red';
-                var question = questions[Math.floor(Math.random()*questions.length)];
-                displayQuestion(question)
+                let lives = document.getElementById('l-num');
+                let n = document.getElementById('l-num').innerText;
                 lives.innerText = n - 1;
+                let question = questions[Math.floor(Math.random()*questions.length)];
+                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 900);
+                setTimeout(() => {displayQuestion(question);}, 1000);
             }
+        
         })
     }
+
 }
 
 // Menu toggler 
