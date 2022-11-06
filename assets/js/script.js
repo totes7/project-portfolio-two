@@ -16,6 +16,10 @@ let questions = [
         answers: ['Italy', 'France', 'Brazil', 'England']
     },
     {
+        prompt: 'Who won the first ever World Cup?',
+        answers: ['Tunisia', 'Uruguay', 'Italy', 'Messico']
+    },
+    {
         prompt: 'Which of these players has scored more goals in World Cup history?',
         answers: ['Ronaldo', 'Miroslav Klose', 'Roberto Baggio', 'Lionel Messi']
     },
@@ -30,10 +34,6 @@ let questions = [
     {
         prompt: 'Which of these teams has lost the World Cup final the most times?',
         answers: ['Argentina', 'England', 'Germany', 'France']
-    },
-    {
-        prompt: 'Who won the first ever World Cup?',
-        answers: ['Italy', 'Uruguay', 'Tunisia', 'Messico']
     },
     {
         prompt: 'Who is the oldest player to play and score in a World Cup at age 42?',
@@ -53,28 +53,29 @@ let questions = [
     },
 ];
 
+// Get the random question
+let question = 0;
 
 function runGame() {
-    //get the random question
-    let question = questions[Math.floor(Math.random()*questions.length)];
         displayQuestion(question);
         checkAnswer();
+        
 }
 
 
 function displayQuestion(x) {
     
     let question = document.getElementById('question');
-    question.innerText = x.prompt;
+    question.innerText = questions[x].prompt;
 
     let answerA = document.getElementById('answer-a');
-    answerA.innerText =x.answers[0];
+    answerA.innerText = questions[x].answers[0];
     let answerB = document.getElementById('answer-b');
-    answerB.innerText =x.answers[1];
+    answerB.innerText = questions[x].answers[1];
     let answerC = document.getElementById('answer-c');
-    answerC.innerText =x.answers[2];
+    answerC.innerText = questions[x].answers[2];
     let answerD = document.getElementById('answer-d');
-    answerD.innerText =x.answers[3];
+    answerD.innerText = questions[x].answers[3];
 }
 
 function checkAnswer() {
@@ -85,17 +86,25 @@ function checkAnswer() {
         answer[i].addEventListener('click', function() {
             if (correctAnswers.includes(answer[i].innerText)) {
                 answer[i].style.backgroundColor = 'green';
-                let question = questions[Math.floor(Math.random()*questions.length)];
+                if (question == 9) {
+                    alert('finished');
+                } else {
+                question += 1;
                 setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
                 setTimeout(() => {displayQuestion(question);}, 800);
+                }
             } else {
                 answer[i].style.backgroundColor = 'red';
                 let lives = document.getElementById('l-num');
                 let n = document.getElementById('l-num').innerText;
                 lives.innerText = n - 1;
-                let question = questions[Math.floor(Math.random()*questions.length)];
+                if (question == 9) {
+                    alert('finished');
+                } else {
+                question += 1;
                 setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
                 setTimeout(() => {displayQuestion(question);}, 800);
+                }
             }
         
         })
