@@ -53,7 +53,7 @@ let questions = [
     },
 ];
 
-// Get the random question
+
 let question = 0;
 
 function runGame() {
@@ -87,26 +87,30 @@ function checkAnswer() {
             if (correctAnswers.includes(answer[i].innerText)) {
                 answer[i].style.backgroundColor = 'green';
                 if (question == 9) {
-                    alert('finished');
+                    let banner = document.getElementById('quiz-win');
+                    banner.style.display = 'block';
                 } else {
-                question += 1;
-                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
-                setTimeout(() => {displayQuestion(question);}, 800);
+                    let questionNumber = document.getElementById('q-num');
+                    let q = parseInt(document.getElementById('q-num').innerText);
+                    setTimeout(() => {questionNumber.innerText = q + 1;}, 800);
+                    question += 1;
+                    setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
+                    setTimeout(() => {displayQuestion(question);}, 800);
                 }
             } else {
-                answer[i].style.backgroundColor = 'red';
                 let lives = document.getElementById('l-num');
                 let n = document.getElementById('l-num').innerText;
-                lives.innerText = n - 1;
-                if (question == 9) {
-                    alert('finished');
+                if (n == 1) {
+                    answer[i].style.backgroundColor = 'red';
+                    lives.innerText = n - 1; 
+                    let banner = document.getElementById('quiz-lose');
+                    banner.style.display = 'block';
                 } else {
-                question += 1;
-                setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
-                setTimeout(() => {displayQuestion(question);}, 800);
+                    answer[i].style.backgroundColor = 'red';
+                    lives.innerText = n - 1; 
+                    setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
                 }
             }
-        
         })
     }
 

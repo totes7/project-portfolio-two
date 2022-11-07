@@ -197,6 +197,38 @@ hr {
     background-color: rgb(0 83 145);
 }
 
+/* End of quiz win and lose banners */
+
+.quiz-end {
+    width: 50%;
+    height: 60%;
+    background-color: rgb(245, 245, 245);
+    text-align: center;
+    font-size: 250%;
+    padding: 1%;
+    box-shadow: 5px 5px 8px black;
+
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+}
+
+.quiz-end p {
+    padding-top: 15%;
+}
+
+#quiz-win {
+    display: none;
+    border: 10px solid green;
+    z-index: 1;
+}
+
+#quiz-lose {
+    display: none;
+    border: 10px solid red;
+    z-index: 1;
+}
+
 
 /* History and trophy section */
 
@@ -334,6 +366,10 @@ hr {
         line-height: 75px;
     }
 
+    .quiz-end {
+        font-size: 190%;
+    }
+
     .history {
         font-size: 110%;
     }
@@ -367,12 +403,18 @@ hr {
     }
 
     .intro {
-        font-size: 200%;
+        font-size: 160%;
         line-height: 60px;
     }
 
     .answer {
         margin: 10% 0 2% 6.5%;
+    }
+
+    .quiz-end {
+        width: 60%;
+        font-size: 180%;
+        left: 20%;
     }
 
     .history {
