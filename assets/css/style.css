@@ -404,12 +404,21 @@ hr {
         padding: 15px 0 0 5px;
     }
 
+    .history {
+        font-size: 125%;
+    }
+
     #trophy {
-        left: 20%;
+        left: 15%;
+    }
+
+    #trophy-banner {
+        padding: 20% 0 0 17%;
     }
 
     .trophy-history {
-        font-size: 100%;
+        font-size: 120%;
     }
 
 }
+
