@@ -16,7 +16,6 @@
                 <ul>
                     <li><a id="menu-toggler" href="#">+ Menu</a></li>
                     <li><a href="history.html">WC History</a></li>
-                    <li><a href="winners.html">WC Winners</a></li>
                     <li><a href="index.html">Home</a></li>
                 </ul>
             </div>
@@ -24,8 +23,7 @@
         <div class="intro">
             <h1>FIFA WORLD CUP QUIZ</h1>
             <hr>
-            <p>Welcome to the FIFA World Cup Quiz! The quiz consists of 10 questions, you will have 
-                30 seconds to answer each question. You are allowed only 3 wrong answers!
+            <p>Welcome to the FIFA World Cup Quiz! The quiz consists of 10 questions. You are allowed only 3 wrong answers!
                 Do you think you have what it takes to answer all the questions and 
                 win the Quiz World Cup?
             </p>
@@ -40,21 +38,27 @@
             <div id="question">
                 Question text content..
             </div>
-            <button class="answer" id="answer-a">A</button>
-            <button class="answer" id="answer-b">B</button>
-            <button class="answer" id="answer-c">C</button>
-            <button class="answer" id="answer-d">D</button>
+            <button class="answer" id="answer-a" aria-label="answer-a">A</button>
+            <button class="answer" id="answer-b" aria-label="answer-b">B</button>
+            <button class="answer" id="answer-c" aria-label="answer-c">C</button>
+            <button class="answer" id="answer-d" aria-label="answer-d">D</button>
         </div>
 
         <div class="quiz-end" id="quiz-win">
             <h1>You're a Winner!</h1>
             <hr>
             <p>Congratulations! You answered all questions correctly!</p>
+            <a href="history.html">Check out the WC History!</a>
+            <hr class="space">
+            <a href="index.html">Back to Homepage!</a>
         </div>
         <div class="quiz-end" id="quiz-lose">
             <h1>I'm sorry.. You lose!</h1>
             <hr>
             <p>You lost all your lives before answering all the questions!</p>
+            <a href="index.html">Try Again!</a>
+            <hr class="space">
+            <a href="history.html">Check out the WC History!</a>
         </div>
     </div>
     

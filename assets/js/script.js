@@ -119,15 +119,15 @@ function checkAnswer() {
 // Menu toggler 
 
 let menu = document.getElementsByClassName('menu');
-menu[0].style.transform = 'translateX(85%)';
+menu[0].style.transform = 'translateX(80%)';
 let toggler = document.getElementById('menu-toggler');
 toggler.addEventListener('click', function() {  
-    if (menu[0].style.transform == 'translateX(85%)') {
+    if (menu[0].style.transform == 'translateX(80%)') {
     toggler.innerText = '- Menu';
     menu[0].style.transform = 'translateX(0)';
     } else {
         toggler.innerText = '+ Menu';
-    menu[0].style.transform = 'translateX(85%)';
+    menu[0].style.transform = 'translateX(80%)';
     }
 })
 

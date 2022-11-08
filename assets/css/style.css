@@ -67,16 +67,16 @@ header {
     font-size: 110%;
     top: 0;
     right: 0;
-    transform: translateX(85%);
+    transform: translateX(80%);
     transition: 1s;
-    padding: 10px 0 0 15px;
+    padding: 10px 0 0 25px ;
     box-sizing: border-box;
 }
 
 .menu li {
     display: inline;
     float: left;
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 .menu a {
@@ -108,7 +108,7 @@ header {
 
 h1 {
     font-family: Audiowide, sans-serif;
-    color: rgb(0, 83, 145);
+    color: gold;
     padding-top: 2%;
 }
 
@@ -214,7 +214,7 @@ hr {
 }
 
 .quiz-end p {
-    padding-top: 15%;
+    padding: 10% 0 5% 0;
 }
 
 #quiz-win {
@@ -227,6 +227,21 @@ hr {
     display: none;
     border: 10px solid red;
     z-index: 1;
+}
+
+#quiz-win a, #quiz-lose a {
+    color: rgb(0, 83, 145);
+    text-decoration: none;
+    text-align: center;
+    font-size: 90%;
+}
+
+#quiz-win a:hover {
+    color: gold;
+}
+
+#quiz-lose a:hover {
+    color: gold;
 }
 
 
@@ -292,6 +307,10 @@ hr {
     left: 35%;
 }
 
+.trophy-history h1 {
+    color: rgb(0, 83, 145);
+}
+
 #close-trophy {
     font-family: Audiowide, sans-serif;
     font-size: 150%;
@@ -301,54 +320,6 @@ hr {
     float: right;
 }
 
-/* Winners section */
-
-.winners {
-    width: 80%;
-    height: 80%;
-    background-color: rgb(245, 245, 245);
-    text-align: center;
-    font-size: 160%;
-    border: 10px solid rgb(0 83 145);
-    display: inline-block;
-
-    position: absolute;
-    left: 10%;
-    bottom: 5%;
-}
-
-#trophy-winners {
-    width: 25%;
-    height: 80%;
-}
-
-.winners-left {
-    width: 35%;
-    font-family: Audiowide, sans-serif;
-    font-size: 170%;
-    text-align: left;
-    background-color: gold;
-    float: left;
-    padding: 2% 0 0 5%;
-    box-sizing: border-box;
-    box-shadow: 5px 5px 8px black;
-}
-
-.winners-right {
-    width: 35%;
-    font-family: Audiowide, sans-serif;
-    font-size: 170%;
-    text-align: right;
-    background-color: gold;
-    float: right;
-    padding: 2% 5% 0 0 ;
-    box-sizing: border-box;
-    box-shadow: -5px 5px 8px black;
-}
-
-.winners-left span, .winners-right span {
-    color: rgb(0, 83, 145);
-}
 
 
 /* Media queries  */
@@ -357,10 +328,8 @@ hr {
 
 @media screen and (max-width: 1600px) {
     .menu {
-        width: 35%;
-        padding: 10px 0 0 5px;
+        padding-left: 10px;
     }
-
     .intro {
         font-size: 180%;
         line-height: 75px;
@@ -391,17 +360,13 @@ hr {
         font-size: 120%;
     }
 
-    .winners {
-        font-size: 100%;
-    }
 }
 
 /* For large and medium screens size from 1200px wide and down */
 @media screen and (max-width: 1200px) {
     .menu {
-        width: 50%;
+        width: 40%;
     }
-
     .intro {
         font-size: 160%;
         line-height: 60px;
@@ -421,11 +386,6 @@ hr {
         font-size: 100%;
     }
 
-    #trophy {
-        width: 7%;
-        height: 22%;
-    }
-
     #trophy-banner {
         font-size: 100%;
         padding: 5% 0 0 17%;
@@ -435,9 +395,21 @@ hr {
         font-size: 110%;
     }
 
-    #trophy-winners {
-        width: 20%;
-        height: 60%;
-        padding-top: 7%;
+}
+
+/* For medium screens size from 950px wide and down */
+@media screen and (max-width: 950px) {
+    .menu {
+        font-size: 90%;
+        padding: 15px 0 0 5px;
     }
+
+    #trophy {
+        left: 20%;
+    }
+
+    .trophy-history {
+        font-size: 100%;
+    }
+
 }
