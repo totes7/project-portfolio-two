@@ -19,7 +19,7 @@ let questions = [
     },
     {
         prompt: 'Who won the first ever World Cup?',
-        answers: ['Tunisia', 'Uruguay', 'Italy', 'Messico']
+        answers: ['Tunisia', 'Uruguay', 'Italy', 'Mexico']
     },
     {
         prompt: 'Which of these players has scored more goals in World Cup history?',
