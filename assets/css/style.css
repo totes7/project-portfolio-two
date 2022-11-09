@@ -227,7 +227,7 @@ hr {
 }
 
 #quiz-lose {
-    display: block;
+    display: none;
     border: 10px solid red;
     z-index: 1;
 }
