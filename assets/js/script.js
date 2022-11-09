@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     start.addEventListener('click', function() {
         console.log('hi');
         let gameArea = document.getElementsByClassName('game-area');
+        let intro = document.getElementsByClassName('intro');
         gameArea[0].style.display = 'inline-block';
+        intro[0].style.display = 'none';
         runGame();
     })
 })
@@ -143,4 +145,10 @@ let closeButton = document.getElementById('close-trophy');
 closeButton.addEventListener('click', function() {
     let trophyHistory = document.getElementsByClassName('trophy-history');
     trophyHistory[0].style.display = 'none';
+})
+
+let miniButton = document.getElementById('mini-trophy');
+miniButton.addEventListener('click', function() {
+    let trophyHistory = document.getElementsByClassName('trophy-history');
+    trophyHistory[0].style.display = 'inline-block';
 })

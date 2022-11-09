@@ -69,7 +69,7 @@ header {
     right: 0;
     transform: translateX(80%);
     transition: 1s;
-    padding: 10px 0 0 25px ;
+    padding: 1% 0 0 2% ;
     box-sizing: border-box;
 }
 
@@ -99,7 +99,7 @@ header {
     text-align: center;
     font-size: 300%;
     border: 10px solid rgb(0 83 145);
-    line-height: 100px;
+    line-height: 250%;
 
     position: absolute;
     left: 10%;
@@ -253,6 +253,7 @@ hr {
     background-color: rgb(245, 245, 245);
     text-align: center;
     font-size: 175%;
+    line-height: 140%;
     border: 10px solid rgb(0 83 145);
 
     position: absolute;
@@ -274,6 +275,10 @@ hr {
     font-family: Audiowide, sans-serif;
     font-size: 125%;
     padding: 5% 0 0 15%;
+}
+
+#mini-trophy {
+    display: none;
 }
 
 #trophy {
@@ -328,11 +333,10 @@ hr {
 
 @media screen and (max-width: 1600px) {
     .menu {
-        padding-left: 10px;
+        padding-left: 1%;
     }
     .intro {
         font-size: 180%;
-        line-height: 75px;
     }
 
     .quiz-end {
@@ -369,7 +373,6 @@ hr {
     }
     .intro {
         font-size: 160%;
-        line-height: 60px;
     }
 
     .answer {
@@ -404,11 +407,25 @@ hr {
         padding: 15px 0 0 5px;
     }
 
+    .intro {
+        font-size: 200%;
+    }
+
+    .answer {
+        width: 90%;
+        margin: 5% 0 2% 5%;   
+    }
+
+
     .history {
         font-size: 125%;
+        line-height: 160%;
     }
 
     #trophy {
+        width: 10%;
+        height: 27%;
+        bottom: 1%;
         left: 15%;
     }
 
@@ -417,8 +434,94 @@ hr {
     }
 
     .trophy-history {
-        font-size: 120%;
+        height: 50%;
     }
 
 }
 
+/* For medium and small screens size from 800px wide and down */
+@media screen and (max-width: 800px) {
+    .logo {
+        font-size: 140%;
+    }
+
+    .menu {
+        width: 50%;
+    }
+
+    .answer {
+        margin: 7% 0 2% 5%;   
+    }
+
+    .history {
+        font-size: 125%;
+        line-height: 120%;
+    }
+
+    #trophy {
+        width: 12%;
+        left: 10%;
+    }
+
+    .trophy-history {
+        height: 60%;
+        font-size: 100%;
+    }
+}
+
+/* For small screens size from 600px wide and down */
+@media screen and (max-width: 600px) {
+    .logo {
+        font-size: 135%;
+    }
+
+    .menu {
+        width: 100%;
+        padding-left: 2%;
+    }
+
+    .intro {
+        font-size: 130%;
+    }
+
+    .history {
+        font-size: 90%;
+        padding: 2%;
+    }
+
+    #mini-trophy {
+        display: inline-block;
+        color: gold;
+        font-size: 200%;
+    }
+
+    #trophy {
+        display: none;
+    }
+
+    #trophy-banner {
+        padding: 20% 0 0 5%;
+    }
+
+    .trophy-history {
+        height: 40%;
+        font-size: 60%;
+        bottom: 40%;
+    }
+}
+
+/* For smallest screens size from 400px wide and down */
+@media screen and (max-width: 400px) {
+    .logo {
+        font-size: 100%;
+    }
+
+    .history {
+        font-size: 70%;
+    }
+
+    .trophy-history {
+        height: 45%;
+        font-size: 50%;
+    }
+}
