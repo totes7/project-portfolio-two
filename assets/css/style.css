@@ -100,6 +100,7 @@ header {
     font-size: 300%;
     border: 10px solid rgb(0 83 145);
     line-height: 250%;
+    box-sizing: border-box;
 
     position: absolute;
     left: 10%;
@@ -145,6 +146,7 @@ hr {
     height: 80%;
     background-color: white;
     border: 10px solid rgb(0 83 145);
+    box-sizing: border-box;
 
     position: absolute;
     left: 10%;
@@ -207,6 +209,7 @@ hr {
     font-size: 250%;
     padding: 1%;
     box-shadow: 5px 5px 8px black;
+    box-sizing: border-box;
 
     position: absolute;
     bottom: 15%;
@@ -255,6 +258,7 @@ hr {
     font-size: 175%;
     line-height: 140%;
     border: 10px solid rgb(0 83 145);
+    box-sizing: border-box;
 
     position: absolute;
     left: 10%;
@@ -372,7 +376,11 @@ hr {
         width: 40%;
     }
     .intro {
+        width: 90%;
+        height: 90%;
         font-size: 160%;
+        bottom: 2%;
+        left: 5%;
     }
 
     .answer {
@@ -484,6 +492,10 @@ hr {
         font-size: 130%;
     }
 
+    .quiz-end {
+        font-size: 175%;
+    }
+
     .history {
         font-size: 90%;
         padding: 2%;
@@ -514,6 +526,10 @@ hr {
 @media screen and (max-width: 400px) {
     .logo {
         font-size: 100%;
+    }
+
+    .quiz-end {
+        font-size: 125%;
     }
 
     .history {
