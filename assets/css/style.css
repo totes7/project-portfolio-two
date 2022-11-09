@@ -227,7 +227,7 @@ hr {
 }
 
 #quiz-lose {
-    display: none;
+    display: block;
     border: 10px solid red;
     z-index: 1;
 }
@@ -493,7 +493,7 @@ hr {
     }
 
     .quiz-end {
-        font-size: 175%;
+        font-size: 165%;
     }
 
     .history {
@@ -529,7 +529,7 @@ hr {
     }
 
     .quiz-end {
-        font-size: 125%;
+        font-size: 115%;
     }
 
     .history {
