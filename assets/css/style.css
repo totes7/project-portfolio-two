@@ -255,7 +255,7 @@ hr {
     height: 80%;
     background-color: rgb(245, 245, 245);
     text-align: center;
-    font-size: 175%;
+    font-size: 150%;
     line-height: 140%;
     border: 10px solid rgb(0 83 145);
     box-sizing: border-box;
@@ -333,9 +333,9 @@ hr {
 
 /* Media queries  */
 
-/* For larger screens size from 1600px wide and down */
+/* For larger screens size from 1599px wide and down */
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1599px) {
     .menu {
         padding-left: 1%;
     }
@@ -360,7 +360,7 @@ hr {
 
     #trophy-banner {
         font-size: 115%;
-        padding: 0 0 0 17%;
+        padding: 5% 0 0 17%;
     }
 
     .trophy-history {
@@ -394,12 +394,12 @@ hr {
     }
 
     .history {
-        font-size: 100%;
+        font-size: 90%;
     }
 
     #trophy-banner {
         font-size: 100%;
-        padding: 5% 0 0 17%;
+        padding: 2% 0 0 17%;
     }
 
     .trophy-history {
@@ -542,11 +542,11 @@ hr {
     }
 
     .history {
-        font-size: 70%;
+        font-size: 50%;
     }
 
     .trophy-history {
         height: 45%;
-        font-size: 50%;
+        font-size: 45%;
     }
 }
