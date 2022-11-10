@@ -532,6 +532,11 @@ hr {
         font-size: 100%;
     }
 
+    .intro {
+        height: 85%;
+        font-size: 100%;
+    }
+
     .quiz-end {
         font-size: 125%;
     }

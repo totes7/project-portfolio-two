@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         gameArea[0].style.display = 'inline-block';
         intro[0].style.display = 'none';
         runGame();
-    })
-})
+    });
+});
 
 let questions = [
     {
@@ -60,8 +60,7 @@ let question = 0;
 
 function runGame() {
         displayQuestion(question);
-        checkAnswer();
-        
+        checkAnswer();    
 }
 
 
@@ -113,7 +112,7 @@ function checkAnswer() {
                     setTimeout(() => {answer[i].style.backgroundColor = 'whitesmoke';}, 700);
                 }
             }
-        })
+        });
     }
 
 }
@@ -131,7 +130,7 @@ toggler.addEventListener('click', function() {
         toggler.innerText = '+ Menu';
     menu[0].style.transform = 'translateX(80%)';
     }
-})
+});
 
 // Trophy history open and close button
 
@@ -139,16 +138,16 @@ let openButton = document.getElementById('trophy-btn');
 openButton.addEventListener('click', function() {
     let trophyHistory = document.getElementsByClassName('trophy-history');
     trophyHistory[0].style.display = 'inline-block';
-})
+});
 
 let closeButton = document.getElementById('close-trophy');
 closeButton.addEventListener('click', function() {
     let trophyHistory = document.getElementsByClassName('trophy-history');
     trophyHistory[0].style.display = 'none';
-})
+});
 
 let miniButton = document.getElementById('mini-trophy');
 miniButton.addEventListener('click', function() {
     let trophyHistory = document.getElementsByClassName('trophy-history');
     trophyHistory[0].style.display = 'inline-block';
-})
+});
