@@ -221,7 +221,7 @@ hr {
 }
 
 #quiz-win {
-    display: block;
+    display: none;
     border: 10px solid green;
     z-index: 1;
 }
