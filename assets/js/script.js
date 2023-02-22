@@ -3,7 +3,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let start = document.getElementById('start');
     start.addEventListener('click', function() {
-        console.log('hi');
         let gameArea = document.getElementsByClassName('game-area');
         let intro = document.getElementsByClassName('intro');
         gameArea[0].style.display = 'inline-block';
@@ -135,19 +134,25 @@ toggler.addEventListener('click', function() {
 // Trophy history open and close button
 
 let openButton = document.getElementById('trophy-btn');
-openButton.addEventListener('click', function() {
-    let trophyHistory = document.getElementsByClassName('trophy-history');
-    trophyHistory[0].style.display = 'inline-block';
-});
+if(openButton){
+    openButton.addEventListener('click', function() {
+        let trophyHistory = document.getElementsByClassName('trophy-history');
+        trophyHistory[0].style.display = 'inline-block';
+    });
+}
 
 let closeButton = document.getElementById('close-trophy');
-closeButton.addEventListener('click', function() {
-    let trophyHistory = document.getElementsByClassName('trophy-history');
-    trophyHistory[0].style.display = 'none';
-});
+if(closeButton){
+    closeButton.addEventListener('click', function() {
+        let trophyHistory = document.getElementsByClassName('trophy-history');
+        trophyHistory[0].style.display = 'none';
+    });
+}
 
 let miniButton = document.getElementById('mini-trophy');
-miniButton.addEventListener('click', function() {
-    let trophyHistory = document.getElementsByClassName('trophy-history');
-    trophyHistory[0].style.display = 'inline-block';
-});
+if(miniButton){
+    miniButton.addEventListener('click', function() {
+        let trophyHistory = document.getElementsByClassName('trophy-history');
+        trophyHistory[0].style.display = 'inline-block';
+    });
+}
