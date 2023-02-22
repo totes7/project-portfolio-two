@@ -416,17 +416,10 @@ hr {
     }
 
     .intro {
-        font-size: 200%;
+        font-size: 180%;
     }
-
-    .answer {
-        width: 90%;
-        margin: 5% 0 2% 5%;   
-    }
-
 
     .history {
-        font-size: 125%;
         line-height: 160%;
     }
 
@@ -437,12 +430,9 @@ hr {
         left: 15%;
     }
 
-    #trophy-banner {
-        padding: 20% 0 0 17%;
-    }
-
     .trophy-history {
         height: 50%;
+        font-size: 80%;
     }
 
 }
@@ -457,12 +447,11 @@ hr {
         width: 50%;
     }
 
-    .answer {
-        margin: 7% 0 2% 5%;   
+    .intro {
+        font-size: 150%;
     }
 
     .history {
-        font-size: 125%;
         line-height: 120%;
     }
 
@@ -473,7 +462,6 @@ hr {
 
     .trophy-history {
         height: 60%;
-        font-size: 100%;
     }
 }
 
@@ -492,6 +480,11 @@ hr {
         font-size: 130%;
     }
 
+    .answer {
+        width: 90%;
+        margin: 5% 0 2% 5%;   
+    }
+
     #question {
         font-size: 120%;
     }
@@ -501,7 +494,7 @@ hr {
     }
 
     .history {
-        font-size: 80%;
+        font-size: 70%;
         padding: 2%;
     }
 
@@ -516,12 +509,12 @@ hr {
     }
 
     #trophy-banner {
-        padding: 20% 0 0 5%;
+        padding: 5% 0 0 5%;
     }
 
     .trophy-history {
         height: 40%;
-        font-size: 60%;
+        font-size: 50%;
         bottom: 40%;
     }
 }
@@ -554,4 +547,5 @@ hr {
         height: 45%;
         font-size: 45%;
     }
+
 }
